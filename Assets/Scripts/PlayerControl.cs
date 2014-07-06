@@ -45,7 +45,7 @@ public class PlayerControl : MonoBehaviour
             // Add a vertical force to the player.
             rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 
-            // Make sure the player can't jump again until the jump conditions from Update are satisfied.
+            /// Make sure the player can't jump again until the jump conditions from Update are satisfied.
             jump = false;
         }
     }
