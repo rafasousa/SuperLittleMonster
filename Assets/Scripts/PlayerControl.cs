@@ -7,12 +7,12 @@ public class PlayerControl : MonoBehaviour
 
     public float jumpForce = 600f;
 
-    private Animator anim;  
-    
+    private Animator anim;
+
     private Transform groundCheck;
 
     private bool grounded = false;
-    
+
     void Awake()
     {
         // Setting up references.
@@ -30,7 +30,7 @@ public class PlayerControl : MonoBehaviour
         {
             jump = true;
 
-            SoundEffectsHelper.Instance.MakeJumpSound();
+            SoundEffectsHelper.Instance.MakeSound(SoundType.Jump);
         }
     }
 
@@ -42,8 +42,8 @@ public class PlayerControl : MonoBehaviour
             // Set the Jump animator trigger parameter.
             anim.SetTrigger("Jump");
 
-            // Add a vertical force to the player.
-            rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            // Add a vertical velocity to the player jump.
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce / 100);
 
             /// Make sure the player can't jump again until the jump conditions from Update are satisfied.
             jump = false;

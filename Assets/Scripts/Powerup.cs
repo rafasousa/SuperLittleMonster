@@ -18,8 +18,8 @@ public class Powerup : MonoBehaviour
             {
                 case PowerupType.Coin:
                     hud.IncreaseCoin(1);
-                    
-                    SoundEffectsHelper.Instance.MakeCoinSound();
+
+                    SoundEffectsHelper.Instance.MakeSound(SoundType.Coin);
 
                     break;
                 case PowerupType.DoubleScore:

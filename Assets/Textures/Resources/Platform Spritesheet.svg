@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Little Offo Game - Platform Spritesheet.svg">
+   sodipodi:docname="Platform Spritesheet.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
      inkscape:cx="536.04018"
-     inkscape:cy="1403.5819"
+     inkscape:cy="353.02326"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,7 +54,7 @@
     <g
        transform="matrix(1.5100798,0,0,1.3846525,-93.116615,-533.53653)"
        id="g6376"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\little offo - platform.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <path
@@ -2956,7 +2956,7 @@
     <g
        transform="matrix(2.1652664,0,0,2.6404849,-1691.2534,461.10052)"
        id="g7644"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <path
@@ -2978,7 +2978,7 @@
     <g
        transform="matrix(2.1652664,0,0,2.6404849,-2220.4287,461.10052)"
        id="g7649"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <path
@@ -2999,7 +2999,7 @@
     </g>
     <g
        id="g4574"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(2.1652664,0,0,2.6404849,-109.62214,1436.8604)">
@@ -3016,7 +3016,7 @@
     </g>
     <g
        id="g5819"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(2.1652664,0,0,2.6404849,-452.56638,1555.1376)">
@@ -3038,7 +3038,7 @@
     </g>
     <g
        id="g4578"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(2.1652664,0,0,2.6404849,-440.56638,1555.1376)">
@@ -3055,7 +3055,7 @@
     </g>
     <g
        id="g4566"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(2.1652664,0,0,2.6404849,-109.62214,1415.7365)">
@@ -3072,7 +3072,7 @@
     </g>
     <g
        id="g4561"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(2.1652664,0,0,2.6404849,-109.62214,1415.7365)">
@@ -3094,7 +3094,7 @@
     </g>
     <g
        id="g4570"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(2.1652664,0,0,2.6404849,-109.62214,1415.7365)">
@@ -3111,7 +3111,7 @@
     </g>
     <g
        id="g4414"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(1.8827459,0,0,2.0793411,-809.77111,1691.0604)">
@@ -3133,7 +3133,7 @@
     </g>
     <g
        id="g4409"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(1.8827459,0,0,2.0793411,-809.77111,1691.0604)">
@@ -3155,7 +3155,7 @@
     </g>
     <g
        id="g4490"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(1.8827459,0,0,2.0793411,-809.77111,1691.0604)">
@@ -3182,7 +3182,7 @@
     </g>
     <g
        id="g5792"
-       inkscape:export-filename="C:\Users\Rafael\Pictures\Character\Game\shadow-painel.png"
+       inkscape:export-filename="C:\inetpub\wwwroot\Unity\Super Little Monster\Assets\Textures\platform.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        transform="matrix(1.8827459,0,0,2.0793411,-809.77111,1691.0604)">

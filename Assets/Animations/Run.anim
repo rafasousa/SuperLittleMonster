@@ -18,27 +18,27 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300000, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .0399999991
-      value: {fileID: 21300002, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300002, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .0799999982
-      value: {fileID: 21300004, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300004, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .119999997
-      value: {fileID: 21300006, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300006, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .159999996
-      value: {fileID: 21300008, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300008, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .200000003
-      value: {fileID: 21300010, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300010, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .24000001
-      value: {fileID: 21300012, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300012, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .280000001
-      value: {fileID: 21300014, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300014, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .319999993
-      value: {fileID: 21300016, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300016, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .359999985
-      value: {fileID: 21300018, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300018, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     - time: .399999976
-      value: {fileID: 21300020, guid: 4f22374e3a0fae44eb81dbec938cf110, type: 3}
+      value: {fileID: 21300020, guid: 7fcca4fd77a35834c89c98a801ca7abf, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212

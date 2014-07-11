@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        SoundEffectsHelper.Instance.MakeBackgroundSound(SoundType.Menu);
+
         this.currentGUIMethod = MainMenuGUI;
     }
 
@@ -18,54 +20,29 @@ public class MainMenu : MonoBehaviour
     {
         GUI.skin = this.guiSkin;
 
-        GUI.BeginGroup(new Rect(80, 70, Screen.width - 200, Screen.height - 80));
-        {
-            GUI.Box(new Rect(0, 0, Screen.width - 200, Screen.height - 80), Main.GameName, GUI.skin.GetStyle("box"));
+        GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "Super Little Monster", GUI.skin.GetStyle("box"));
 
-            // First button
-            if (GUI.Button(new Rect(10, 50, Screen.width - 220, 40), "Play", GUI.skin.GetStyle("button")))
-            {
-                Application.LoadLevel("Level");
-            }
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 80, 200, 40), "Play", GUI.skin.GetStyle("button")))
+            Application.LoadLevel("Level");
 
-            if (GUI.Button(new Rect(10, 100, Screen.width - 220, 40), "Options", GUI.skin.GetStyle("button")))
-            {
-                // go to next menu
-                this.currentGUIMethod = OptionsMenuGUI;
-            }
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 140, 200, 40), "Options", GUI.skin.GetStyle("button")))
+            this.currentGUIMethod = OptionsMenuGUI;
 
-            if (GUI.Button(new Rect(10, 150, Screen.width - 220, 40), "Exit", GUI.skin.GetStyle("button")))
-            {
-                Application.Quit();
-            }
-        }
-        GUI.EndGroup();
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 200, 200, 40), "Exit", GUI.skin.GetStyle("button")))
+            Application.Quit();
     }
 
     public void OptionsMenuGUI()
     {
         GUI.skin = this.guiSkin;
 
-        GUI.BeginGroup(new Rect(80, 70, Screen.width - 200, Screen.height - 80));
-        {
-            GUI.Box(new Rect(0, 0, Screen.width - 200, Screen.height - 80), Main.GameName, GUI.skin.GetStyle("box"));
+        GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "Options", GUI.skin.GetStyle("box"));
 
-            if (GUI.Button(new Rect(10, 50, Screen.width - 220, 40), "Sound", GUI.skin.GetStyle("button")))
-            {
-                //doing sometinhg here
-            }
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 80, 200, 40), "Sound - " + (SoundEffectsHelper.Instance.IsMute ? "Off" : "On"), GUI.skin.GetStyle("button")))
+            SoundEffectsHelper.Instance.SetMute();
 
-            if (GUI.Button(new Rect(10, 100, Screen.width - 220, 40), "Music", GUI.skin.GetStyle("button")))
-            {
-                //doing sometinhg here
-            }
-
-            if (GUI.Button(new Rect(10, 150, Screen.width - 220, 40), "Menu", GUI.skin.GetStyle("button")))
-            {
-                this.currentGUIMethod = MainMenuGUI;
-            }
-        }
-        GUI.EndGroup();
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 140, 200, 40), "Menu", GUI.skin.GetStyle("button")))
+            this.currentGUIMethod = MainMenuGUI;
     }
 
     // Update is called once per frame

@@ -1,23 +1,19 @@
 ﻿using UnityEngine;
-using System.Linq;
 using System.Collections;
-using System.Collections.Generic;
 
 public class SpawnPlatform : MonoBehaviour
 {
     public GameObject[] platforms;
 
-    public float spawnTime = 5f;
+    private float spawnPositionY = -4.5f;
 
-    public float spawnPositionY = -4.5f;
+    private float spawnTime = 10f;
 
     private bool spawn = true;
 
-    Vector3 oldSpawnPos = Vector3.zero;
+    private Vector3 oldSpawnPos = Vector3.zero;
 
-    GameObject platformClone;
-
-    GameObject coinClone;
+    private GameObject platformClone;
 
     void Update()
     {
@@ -38,8 +34,11 @@ public class SpawnPlatform : MonoBehaviour
 
         oldSpawnPos = platformClone.transform.position;
 
+        if (!VelocityController.IsBoostSpeedMax && VelocityController.IsBoostSpeed)
+            spawnTime = VelocityController.SpawnTime;
+
         yield return new WaitForSeconds(spawnTime);
 
         spawn = true;
     }
-}
+};

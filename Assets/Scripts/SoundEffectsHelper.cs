@@ -11,9 +11,21 @@ public class SoundEffectsHelper : MonoBehaviour
     /// </summary>
     public static SoundEffectsHelper Instance;
 
+    public AudioClip backgroundSound;
+
     public AudioClip playerJumpSound;
+
     public AudioClip playerRunSound;
+
+    public AudioClip gameOverSound;
+
+    public AudioClip menuSound;
+
     public AudioClip coinSound;
+
+    private AudioSource audioSource;
+
+    public bool IsMute;
 
     void Awake()
     {
@@ -21,31 +33,81 @@ public class SoundEffectsHelper : MonoBehaviour
         if (Instance != null)
             Debug.LogError("Multiple instances of SoundEffectsHelper!");
 
+        this.IsMute = PlayerPrefs.GetString("IsMute").Equals("Off");
+
         Instance = this;
     }
 
-    public void MakeJumpSound()
+    public void SetMute()
     {
-        MakeSound(playerJumpSound);
+        IsMute = !IsMute;
+
+        Debug.Log("SetMute - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
+
+        if (!SoundEffectsHelper.Instance.IsMute)
+            PlayerPrefs.SetString("IsMute", "Off");
+        else
+            PlayerPrefs.SetString("IsMute", "On");
+
+        Debug.Log("SetMute - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
+
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.mute = IsMute;
     }
 
-    public void MakeRunSound()
+    public void SetPitchBackgroundSound(float pitch)
     {
-        MakeSound(playerRunSound);
+        if (!SoundEffectsHelper.Instance.IsMute)
+        {
+            audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.pitch = pitch;
+        }
     }
 
-    public void MakeCoinSound()
+    public void MakeSound(SoundType type)
     {
-        MakeSound(coinSound);
+        AudioClip originalClip = null;
+
+        switch (type)
+        {
+            case SoundType.Jump:
+                originalClip = playerJumpSound;
+                break;
+            case SoundType.Run:
+                originalClip = playerRunSound;
+                break;
+            case SoundType.Coin:
+                originalClip = coinSound;
+                break;
+        }
+
+        if (!IsMute && originalClip != null)
+            AudioSource.PlayClipAtPoint(originalClip, transform.position);// As it is not 3D audio clip, position doesn't matter.
     }
 
-    /// <summary>
-    /// Play a given sound
-    /// </summary>
-    /// <param name="originalClip"></param>
-    private void MakeSound(AudioClip originalClip)
+    public void MakeBackgroundSound(SoundType type)
     {
-        // As it is not 3D audio clip, position doesn't matter.
-        AudioSource.PlayClipAtPoint(originalClip, transform.position);
+        AudioClip originalClip = null;
+        
+        switch (type)
+        {
+            case SoundType.Menu:
+                originalClip = menuSound;
+                break;
+            case SoundType.GameOver:
+                originalClip = gameOverSound;
+                break;
+            case SoundType.Background:
+                originalClip = backgroundSound;
+                break;
+        }
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = originalClip;
+        audioSource.priority = 110;
+        audioSource.volume = 1f;
+        audioSource.loop = true;
+        audioSource.mute = IsMute;
+        audioSource.PlayDelayed(0.5f);
     }
 }

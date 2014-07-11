@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4f22374e3a0fae44eb81dbec938cf110
+guid: 7fcca4fd77a35834c89c98a801ca7abf
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -45,166 +45,256 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: little offo - player 1_0
+    - name: player_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 282
-        width: 79
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: little offo - player 1_1
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 282
-        width: 80
+        x: 42
+        y: 1418
+        width: 81
         height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_2
+    - name: player_1
       rect:
         serializedVersion: 2
-        x: 197
-        y: 282
-        width: 80
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: little offo - player 1_3
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 282
-        width: 80
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: little offo - player 1_4
-      rect:
-        serializedVersion: 2
-        x: 412
-        y: 282
-        width: 80
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: little offo - player 1_5
-      rect:
-        serializedVersion: 2
-        x: 531
-        y: 282
-        width: 80
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: little offo - player 1_6
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 159
-        width: 80
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: little offo - player 1_7
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 159
-        width: 80
+        x: 141
+        y: 1418
+        width: 82
         height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_8
+    - name: player_2
       rect:
         serializedVersion: 2
-        x: 219
-        y: 159
-        width: 80
-        height: 87
+        x: 239
+        y: 1418
+        width: 83
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_9
+    - name: player_3
       rect:
         serializedVersion: 2
-        x: 332
-        y: 159
-        width: 80
+        x: 345
+        y: 1418
+        width: 83
         height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_10
+    - name: player_4
       rect:
         serializedVersion: 2
-        x: 441
-        y: 159
-        width: 80
-        height: 84
+        x: 454
+        y: 1418
+        width: 83
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_11
+    - name: player_5
       rect:
         serializedVersion: 2
-        x: 10
-        y: 0
-        width: 79
-        height: 83
+        x: 572
+        y: 1418
+        width: 83
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_12
+    - name: player_6
       rect:
         serializedVersion: 2
-        x: 116
-        y: 0
-        width: 80
-        height: 96
+        x: 43
+        y: 1282
+        width: 83
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_13
+    - name: player_7
       rect:
         serializedVersion: 2
-        x: 219
-        y: 0
-        width: 80
-        height: 112
+        x: 141
+        y: 1282
+        width: 82
+        height: 92
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_14
+    - name: player_8
       rect:
         serializedVersion: 2
-        x: 333
-        y: 0
-        width: 79
+        x: 248
+        y: 1282
+        width: 83
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1282
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_10
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1283
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_11
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1125
+        width: 82
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_12
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1125
+        width: 82
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_13
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1125
+        width: 83
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_14
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1125
+        width: 83
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_15
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1125
+        width: 83
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_16
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 953
+        width: 82
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_17
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 932
+        width: 129
         height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_15
+    - name: player_18
       rect:
         serializedVersion: 2
-        x: 448
-        y: 0
-        width: 80
-        height: 114
+        x: 393
+        y: 901
+        width: 185
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_16
+    - name: player_19
       rect:
         serializedVersion: 2
-        x: 555
-        y: 0
-        width: 80
-        height: 98
+        x: 0
+        y: 557
+        width: 298
+        height: 299
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: little offo - player 1_17
+    - name: player_20
       rect:
         serializedVersion: 2
-        x: 671
+        x: 329
+        y: 557
+        width: 301
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_21
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 563
+        width: 298
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_22
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 221
+        width: 301
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_23
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 219
+        width: 300
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_24
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 226
+        width: 301
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_25
+      rect:
+        serializedVersion: 2
+        x: 41
         y: 0
-        width: 79
-        height: 83
+        width: 185
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_26
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 7
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: player_27
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 20
+        width: 83
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
   spritePackingTag: 
