@@ -21,17 +21,17 @@ public class MainMenu : MonoBehaviour
         GUI.skin = this.guiSkin;
 
         var style = GUI.skin.GetStyle("box");
-        style.fontSize = 48;
+        style.fontSize = 52;
 
         GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "Super Little Monster", style);
 
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, 140, 200, 40), "Play", GUI.skin.GetStyle("button")))
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 120, 200, 40), "Play", GUI.skin.GetStyle("button")))
             Application.LoadLevel("Level");
 
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, 200, 200, 40), "Options", GUI.skin.GetStyle("button")))
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 180, 200, 40), "Options", GUI.skin.GetStyle("button")))
             this.currentGUIMethod = OptionsMenuGUI;
 
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, 260, 200, 40), "Exit", GUI.skin.GetStyle("button")))
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 240, 200, 40), "Exit", GUI.skin.GetStyle("button")))
             Application.Quit();
     }
 
@@ -41,10 +41,13 @@ public class MainMenu : MonoBehaviour
 
         GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "Options", GUI.skin.GetStyle("box"));
 
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, 140, 200, 40), "Sound - " + (SoundEffectsHelper.Instance.IsMute ? "Off" : "On"), GUI.skin.GetStyle("button")))
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 120, 200, 40), "Sound - " + (SoundEffectsHelper.Instance.IsMute ? "Off" : "On"), GUI.skin.GetStyle("button")))
             SoundEffectsHelper.Instance.SetMute();
 
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, 200, 200, 40), "Menu", GUI.skin.GetStyle("button")))
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 180, 200, 40), "Music - " + (SoundEffectsHelper.Instance.IsSound ? "Off" : "On"), GUI.skin.GetStyle("button")))
+            SoundEffectsHelper.Instance.SetSound();
+
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 240, 200, 40), "Back", GUI.skin.GetStyle("button")))
             this.currentGUIMethod = MainMenuGUI;
     }
 

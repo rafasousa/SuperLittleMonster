@@ -23,9 +23,15 @@ public class SoundEffectsHelper : MonoBehaviour
 
     public AudioClip coinSound;
 
+    public float volume = 1;
+
+    public float playDelayed = 1;
+
     private AudioSource audioSource;
 
     public bool IsMute;
+
+    public bool IsSound;
 
     void Awake()
     {
@@ -34,25 +40,32 @@ public class SoundEffectsHelper : MonoBehaviour
             Debug.LogError("Multiple instances of SoundEffectsHelper!");
 
         this.IsMute = PlayerPrefs.GetString("IsMute").Equals("Off");
+        this.IsSound = PlayerPrefs.GetString("IsSound").Equals("On");
 
         Instance = this;
     }
 
     public void SetMute()
     {
-        IsMute = !IsMute;
+        Instance.IsMute = !Instance.IsMute;
 
-        //Debug.Log("SetMute - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
-
-        if (!SoundEffectsHelper.Instance.IsMute)
-            PlayerPrefs.SetString("IsMute", "Off");
-        else
+        if (Instance.IsMute)
             PlayerPrefs.SetString("IsMute", "On");
+        else
+            PlayerPrefs.SetString("IsMute", "Off");
+    }
 
-        //Debug.Log("SetMute - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
+    public void SetSound()
+    {
+        Instance.IsSound = !Instance.IsSound;
+
+        if (Instance.IsSound)
+            PlayerPrefs.SetString("IsSound", "On");
+        else
+            PlayerPrefs.SetString("IsSound", "Off");
 
         audioSource = gameObject.GetComponent<AudioSource>();
-        audioSource.mute = IsMute;
+        audioSource.mute = Instance.IsSound;
     }
 
     public void SetPitchBackgroundSound(float pitch)
@@ -88,7 +101,7 @@ public class SoundEffectsHelper : MonoBehaviour
     public void MakeBackgroundSound(SoundType type)
     {
         AudioClip originalClip = null;
-        
+
         switch (type)
         {
             case SoundType.Menu:
@@ -105,9 +118,9 @@ public class SoundEffectsHelper : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = originalClip;
         audioSource.priority = 110;
-        audioSource.volume = 1f;
+        audioSource.volume = volume;
         audioSource.loop = true;
-        audioSource.mute = IsMute;
-        audioSource.PlayDelayed(0.5f);
+        audioSource.mute = IsSound;
+        audioSource.PlayDelayed(playDelayed);
     }
 }
