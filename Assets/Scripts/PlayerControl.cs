@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
 
     private bool grounded = false;
 
-    private float position = -3.889894f;
+    public float position = -3.889894f;
 
     void Awake()
     {

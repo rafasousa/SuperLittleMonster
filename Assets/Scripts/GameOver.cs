@@ -12,8 +12,6 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("GameOver - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
-
         SoundEffectsHelper.Instance.MakeBackgroundSound(SoundType.GameOver);
 
         playerScore = PlayerPrefs.GetInt("Score");
