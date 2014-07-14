@@ -42,14 +42,14 @@ public class SoundEffectsHelper : MonoBehaviour
     {
         IsMute = !IsMute;
 
-        Debug.Log("SetMute - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
+        //Debug.Log("SetMute - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
 
         if (!SoundEffectsHelper.Instance.IsMute)
             PlayerPrefs.SetString("IsMute", "Off");
         else
             PlayerPrefs.SetString("IsMute", "On");
 
-        Debug.Log("SetMute - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
+        //Debug.Log("SetMute - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
 
         audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.mute = IsMute;
@@ -108,6 +108,6 @@ public class SoundEffectsHelper : MonoBehaviour
         audioSource.volume = 1f;
         audioSource.loop = true;
         audioSource.mute = IsMute;
-        audioSource.PlayDelayed(0.5f);
+        //audioSource.PlayDelayed(0.5f);
     }
 }

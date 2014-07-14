@@ -13,6 +13,8 @@ public class PlayerControl : MonoBehaviour
 
     private bool grounded = false;
 
+    private float position = -3.889894f;
+
     void Awake()
     {
         // Setting up references.
@@ -32,6 +34,9 @@ public class PlayerControl : MonoBehaviour
 
             SoundEffectsHelper.Instance.MakeSound(SoundType.Jump);
         }
+
+        if (transform.position.x < position && grounded)
+            transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
     }
 
     void FixedUpdate()

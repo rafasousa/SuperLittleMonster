@@ -21,8 +21,6 @@ public class HUD : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("HUD - PlayerPrefs.GetString: " + PlayerPrefs.GetString("IsMute"));
-
         SoundEffectsHelper.Instance.MakeBackgroundSound(SoundType.Background);
 
         pause = false;

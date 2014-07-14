@@ -5,11 +5,17 @@ public class VelocityController : MonoBehaviour
 {
     public static float Speed;
 
-    public static float SpeedMin = 0.015f;
+    public static float SpeedMin = 0.017f;
 
-    public static float SpeedMax = 0.025f;
+    public static float SpeedMax = 0.035f;
 
     public static float SpawnTime;
+
+    public static float SpawnTimeMin = 1.2f;
+
+    public static float DestroyTime = 10;
+
+    public static float DestroyTimeMin = 3;
 
     public static bool IsBoostSpeed;
 
@@ -17,11 +23,11 @@ public class VelocityController : MonoBehaviour
 
     void Start()
     {
-        Speed = Time.deltaTime / 3000;
-        
+        Speed = Time.deltaTime / 2500;
+
         Speed = SpeedMin;
 
-        SpawnTime = 10f;
+        SpawnTime = SpawnTimeMin;
     }
 
     void Update()
@@ -31,11 +37,16 @@ public class VelocityController : MonoBehaviour
 
         if (Speed <= SpeedMax)
         {
-            Speed += Time.deltaTime / 3000;
+            Speed += Time.deltaTime / 3500;
 
-            SpawnTime -= Speed / 10;
+            SpawnTime -= Speed / 500;
 
-            //Debug.Log("Speed: " + Speed + ", SpawnTime: " + SpawnTime);
+            var destroyTime = Speed / 5;
+
+            if (DestroyTime >= DestroyTimeMin)
+                DestroyTime -= destroyTime;
+
+            Debug.Log(string.Format("Speed: {0}, SpawnTime: {1}, DestroyTime: {2}", Speed, SpawnTime, DestroyTime));
         }
         else
             IsBoostSpeedMax = true;
