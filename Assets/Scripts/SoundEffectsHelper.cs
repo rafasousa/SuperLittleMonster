@@ -108,6 +108,6 @@ public class SoundEffectsHelper : MonoBehaviour
         audioSource.volume = 1f;
         audioSource.loop = true;
         audioSource.mute = IsMute;
-        //audioSource.PlayDelayed(0.5f);
+        audioSource.PlayDelayed(0.5f);
     }
 }

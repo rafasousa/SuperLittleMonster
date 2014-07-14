@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_119
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 212: {fileID: 21200002}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 212: {fileID: 21200004}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400010}
   - 212: {fileID: 21200006}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_93
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400012}
   - 212: {fileID: 21200008}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400014}
   - 212: {fileID: 21200010}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400016}
   - 212: {fileID: 21200012}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400024}
   - 212: {fileID: 21200014}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400026}
   - 212: {fileID: 21200016}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400034}
   - 212: {fileID: 21200022}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400036}
   - 212: {fileID: 21200024}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400038}
   - 212: {fileID: 21200026}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400040}
   - 212: {fileID: 21200028}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_91
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400042}
   - 212: {fileID: 21200030}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400044}
   - 212: {fileID: 21200032}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_93
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400046}
   - 212: {fileID: 21200034}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: platform_91
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .168249607, y: 0, z: 1}
+  m_LocalPosition: {x: -.0468384027, y: .161445856, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400020}
@@ -517,7 +517,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .371892273, y: 1.71307564, z: -1}
+  m_LocalPosition: {x: .296611488, y: 1.71307564, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400030}
@@ -702,8 +702,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 5f9c37fb361d64b788498991d3de93d7, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 2.05772686, y: .59569931}
-  m_Center: {x: 2.16372871, y: 2.87195635}
+  m_Size: {x: 1.58235884, y: .990344524}
+  m_Center: {x: 2.00676799, y: 2.40555739}
 --- !u!61 &6100002
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -713,8 +713,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 5f9c37fb361d64b788498991d3de93d7, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 5.1038847, y: 1}
-  m_Center: {x: 2.02399683, y: 0}
+  m_Size: {x: 5.06800747, y: 1}
+  m_Center: {x: 2.26616526, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
