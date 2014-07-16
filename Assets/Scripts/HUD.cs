@@ -13,7 +13,13 @@ public class HUD : MonoBehaviour
 
     public int playerMonster = 0;
 
-    private bool hasSound;
+    public static float Height = 60;
+
+    public static float Width = 200;
+
+    public static float Top = 200;
+
+    public static float Left = Screen.width / 2 - 100;
 
     private delegate void GUIMethod();
 
@@ -51,24 +57,27 @@ public class HUD : MonoBehaviour
 
         GUI.Label(new Rect(10, 10, 350, 100), LangHelper.GetInstance().GetString("CoinLabel") + playerCoin, guiStyle);
 
-        GUI.Label(new Rect(Screen.width - 170, 10, 300, 70), LangHelper.GetInstance().GetString("ScoreLabel") + (int)(playerScore * 100));
+        GUI.Label(new Rect(Screen.width - 220, 10, 300, 70), LangHelper.GetInstance().GetString("ScoreLabel") + (int)(playerScore * 100));
 
         if (pause)
-        {
-            GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "", GUI.skin.GetStyle("box"));
+            PauseMenuGUI();
+    }
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, 120, 200, 40), LangHelper.GetInstance().GetString("BackButton"), GUI.skin.GetStyle("button")))
-                pause = false;
+    void PauseMenuGUI()
+    {
+        GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "", GUI.skin.GetStyle("box"));
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, 180, 200, 40), LangHelper.GetInstance().GetString("SoundButton") + (SoundEffectsHelper.Instance.HasSound ? "On" : "Off"), GUI.skin.GetStyle("button")))
-                SoundEffectsHelper.Instance.SetSound();
+        if (GUI.Button(new Rect(HUD.Left, 80, HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("BackButton"), GUI.skin.GetStyle("button")))
+            pause = false;
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, 240, 200, 40), LangHelper.GetInstance().GetString("MusicButton") + (SoundEffectsHelper.Instance.HasMusic ? "On" : "Off"), GUI.skin.GetStyle("button")))
-                SoundEffectsHelper.Instance.SetMusic();
+        if (GUI.Button(new Rect(HUD.Left, 160, HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("SoundButton") + (SoundEffectsHelper.Instance.HasSound ? "On" : "Off"), GUI.skin.GetStyle("button")))
+            SoundEffectsHelper.Instance.SetSound();
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, 300, 200, 40), LangHelper.GetInstance().GetString("ExitButton"), GUI.skin.GetStyle("button")))
-                Application.LoadLevel("Menu");
-        }
+        if (GUI.Button(new Rect(HUD.Left, 240, HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("MusicButton") + (SoundEffectsHelper.Instance.HasMusic ? "On" : "Off"), GUI.skin.GetStyle("button")))
+            SoundEffectsHelper.Instance.SetMusic();
+
+        if (GUI.Button(new Rect(HUD.Left, 320, HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("ExitButton"), GUI.skin.GetStyle("button")))
+            Application.LoadLevel("Menu");
     }
 
     public void OnDisable()
@@ -76,6 +85,10 @@ public class HUD : MonoBehaviour
         PlayerPrefs.SetInt("Score", (int)(playerScore * 100));
 
         PlayerPrefs.SetInt("Coin", (int)playerCoin);
+
+        var totalCoin = PlayerPrefs.GetInt("TotalCoins", 0);
+
+        PlayerPrefs.SetInt("TotalCoins", totalCoin + (int)playerCoin);
     }
 
     public void IncreaseScore(int amount)

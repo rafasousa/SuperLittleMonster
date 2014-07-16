@@ -13,7 +13,7 @@ public class SpawnPlatform : MonoBehaviour
 
     private bool spawn = true;
 
-    private Vector3 oldSpawnPos = Vector3.zero;
+    public Vector3 oldSpawnPos = Vector3.zero;
 
     private GameObject platformClone;
 

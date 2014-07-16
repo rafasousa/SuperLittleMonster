@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Linq;
-using System.Xml.Linq;
+using System.Xml;
+//using System.Xml.Linq;
 using UnityEngine;
 
 public class LangHelper
@@ -31,13 +32,25 @@ public class LangHelper
             var language = PlayerPrefs.GetString("Language", "English");
 
             var xmlLang = Resources.Load("lang") as TextAsset;
+            var xml = new XmlDocument();
 
-            var xElement = XElement.Parse(xmlLang.text);
+            xml.LoadXml(xmlLang.text);
 
-            var elements = xElement.Element(language).Elements().ToList();
+            var el = xml.DocumentElement.SelectSingleNode(language);
 
-            elements.ForEach(element => Strings.Add(element.Attribute("name").Value, element.Value));
+            if (el != null)
+            {
+                foreach (XmlNode item in el.ChildNodes)
+                    Strings.Add(item.Attributes["name"].Value, item.InnerText);
+            }
         }
+    }
+
+    public void ChangeLanguage()
+    {
+        Strings = new Hashtable();
+
+        SetLanguage();
     }
 
     public string GetString(string name)

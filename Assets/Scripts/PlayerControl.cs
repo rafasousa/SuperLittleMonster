@@ -21,7 +21,7 @@ public class PlayerControl : MonoBehaviour
 
     public float gravityMax = 3f;
 
-    public float gravityMin = 2f;
+    public float gravityMin = 1.5f;
 
     void Awake()
     {
@@ -36,7 +36,7 @@ public class PlayerControl : MonoBehaviour
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
         // If the jump button is pressed and the player is grounded then the player should jump.
-        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Mouse0) || Input.touchCount > 0) && grounded)
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Mouse0) && grounded)
         {
             jump = true;
 
@@ -49,7 +49,7 @@ public class PlayerControl : MonoBehaviour
         if ((Input.GetButton("Jump") || Input.GetKey(KeyCode.Mouse0)) && gravity >= gravityMin)
         {
             jumping = true;
-            gravity -= 0.01f;
+            gravity -= 0.1f;
         }
 
         if (Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Mouse0) || gravity <= gravityMin)
@@ -58,7 +58,7 @@ public class PlayerControl : MonoBehaviour
             gravity = gravityMax;
         }
 
-        if (transform.position.x < position && grounded)
+        if (transform.position.x < position && grounded && !HUD.pause)
             transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
     }
 

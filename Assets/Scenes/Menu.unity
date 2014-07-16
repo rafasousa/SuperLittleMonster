@@ -586,8 +586,8 @@ MonoBehaviour:
   coinSound: {fileID: 0}
   volume: 1
   playDelayed: 1
-  IsMute: 0
-  IsSound: 0
+  HasMusic: 0
+  HasSound: 0
 --- !u!4 &2070184947
 Transform:
   m_ObjectHideFlags: 0
