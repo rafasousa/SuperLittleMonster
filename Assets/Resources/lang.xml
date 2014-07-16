@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <English>
+    <string name="AppName">Super Little Monster</string>
+    <string name="AppDescription"></string>
+    <string name="PlayButton">Play</string>
+    <string name="OptionButton">Options</string>
+    <string name="ExitButton">Quit</string>
+    <string name="SoundButton">Sound - </string>
+    <string name="MusicButton">Music - </string>
+    <string name="BackButton">Back</string>
+    <string name="RetryButton">Retry?</string>
+    
+    <string name="OptionLabel">Options</string>
+    <string name="YourScoreLabel">Your Score: </string>
+    <string name="YourCoinLabel">Your Coins: </string>
+    <string name="ScoreLabel">Score: </string>
+    <string name="CoinLabel">Coin: </string>
+    <string name="BestScoreLabel">Best score: </string>
+    
+    <string name="OffLabel">Off</string>
+    <string name="OnLabel">On</string>
+  </English>
+
+  <Portugues>
+    <string name="AppName">Super Little Monster</string>
+    <string name="AppDescription"></string>
+    <string name="PlayButton">Jogar</string>
+    <string name="OptionButton">Opções</string>
+    <string name="ExitButton">Sair</string>
+    <string name="SoundButton">Audio - </string>
+    <string name="MusicButton">Música - </string>
+    <string name="BackButton">Voltar</string>
+    <string name="RetryButton">Tentar de novo?</string>
+    
+    <string name="OptionLabel">Opções</string>
+    <string name="YourScoreLabel">Seu pontuação: </string>
+    <string name="YourCoinLabel">Sua moedas: </string>
+    <string name="ScoreLabel">Pontuação: </string>
+    <string name="CoinLabel">Moeda: </string>
+    <string name="BestScoreLabel">Melhor pontuação: </string>
+    
+    <string name="OffLabel">Off</string>
+    <string name="OnLabel">On</string>
+  </Portugues>
+</languages>

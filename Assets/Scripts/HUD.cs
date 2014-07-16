@@ -49,24 +49,24 @@ public class HUD : MonoBehaviour
         var guiStyle = new GUIStyle(GUI.skin.GetStyle("label"));
         guiStyle.normal.textColor = Color.yellow;
 
-        GUI.Label(new Rect(10, 10, 350, 100), "Coins: " + playerCoin, guiStyle);
+        GUI.Label(new Rect(10, 10, 350, 100), LangHelper.GetInstance().GetString("CoinLabel") + playerCoin, guiStyle);
 
-        GUI.Label(new Rect(Screen.width - 170, 10, 300, 70), "Score: " + (int)(playerScore * 100));
+        GUI.Label(new Rect(Screen.width - 170, 10, 300, 70), LangHelper.GetInstance().GetString("ScoreLabel") + (int)(playerScore * 100));
 
         if (pause)
         {
             GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "", GUI.skin.GetStyle("box"));
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, 120, 200, 40), "Back", GUI.skin.GetStyle("button")))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, 120, 200, 40), LangHelper.GetInstance().GetString("BackButton"), GUI.skin.GetStyle("button")))
                 pause = false;
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, 180, 200, 40), "Sound - " + (SoundEffectsHelper.Instance.IsMute ? "Off" : "On"), GUI.skin.GetStyle("button")))
-                SoundEffectsHelper.Instance.SetMute();
-
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, 240, 200, 40), "Music - " + (SoundEffectsHelper.Instance.IsSound ? "Off" : "On"), GUI.skin.GetStyle("button")))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, 180, 200, 40), LangHelper.GetInstance().GetString("SoundButton") + (SoundEffectsHelper.Instance.HasSound ? "On" : "Off"), GUI.skin.GetStyle("button")))
                 SoundEffectsHelper.Instance.SetSound();
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 100, 300, 200, 40), "Exit", GUI.skin.GetStyle("button")))
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, 240, 200, 40), LangHelper.GetInstance().GetString("MusicButton") + (SoundEffectsHelper.Instance.HasMusic ? "On" : "Off"), GUI.skin.GetStyle("button")))
+                SoundEffectsHelper.Instance.SetMusic();
+
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, 300, 200, 40), LangHelper.GetInstance().GetString("ExitButton"), GUI.skin.GetStyle("button")))
                 Application.LoadLevel("Menu");
         }
     }

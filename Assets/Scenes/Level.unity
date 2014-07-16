@@ -509,6 +509,18 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: b78690a8e186644429867cd05459bf92, type: 2}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: b78690a8e186644429867cd05459bf92, type: 2}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: b78690a8e186644429867cd05459bf92, type: 2}
+      propertyPath: m_FixedAngle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b78690a8e186644429867cd05459bf92, type: 2}
   m_RootGameObject: {fileID: 1987047995}
@@ -1181,8 +1193,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 869084229}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: 2.0558641, y: -6.63937044, z: 0}
-  m_LocalScale: {x: 1, y: 20, z: 1}
+  m_LocalPosition: {x: 3.81594348, y: -6.63936996, z: 0}
+  m_LocalScale: {x: 1, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 25166102}
 --- !u!114 &869084231
@@ -2352,8 +2364,8 @@ MonoBehaviour:
   coinSound: {fileID: 8300000, guid: e6112552c28d23544be46f4c25a97f46, type: 3}
   volume: 1
   playDelayed: 1
-  IsMute: 0
-  IsSound: 0
+  HasMusic: 0
+  HasSound: 0
 --- !u!114 &1537215878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3184,8 +3196,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 0
+  jumping: 0
   jumpForce: 1250
   position: -3.88989401
+  gravity: 0
+  gravityMax: 3
+  gravityMin: 2
 --- !u!1 &2009551092
 GameObject:
   m_ObjectHideFlags: 0

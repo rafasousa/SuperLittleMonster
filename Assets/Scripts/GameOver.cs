@@ -7,16 +7,22 @@ public class GameOver : MonoBehaviour
 
     int playerCoin = 0;
 
-    public GUISkin guiSkin;
+    int bestScore = 0;
 
+    public GUISkin guiSkin;
 
     void Start()
     {
         SoundEffectsHelper.Instance.MakeBackgroundSound(SoundType.GameOver);
 
-        playerScore = PlayerPrefs.GetInt("Score");
+        playerScore = PlayerPrefs.GetInt("Score", 0);
 
-        playerCoin = PlayerPrefs.GetInt("Coin");
+        playerCoin = PlayerPrefs.GetInt("Coin", 0);
+
+        bestScore = PlayerPrefs.GetInt("BestScore", 0);
+
+        if (playerScore > bestScore)
+            PlayerPrefs.SetInt("BestScore", playerScore);
     }
 
     void OnGUI()
@@ -31,14 +37,14 @@ public class GameOver : MonoBehaviour
 
         GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "GAME OVER", GUI.skin.GetStyle("box"));
 
-        GUI.Label(new Rect(Screen.width / 2 - 100, 60, Screen.width - 40, Screen.height - 40), "Your Score: " + playerScore, guiStyleScore);
+        GUI.Label(new Rect(Screen.width / 2 - 100, 60, Screen.width - 40, Screen.height - 40), LangHelper.GetInstance().GetString("YourScoreLabel") + playerScore, guiStyleScore);
 
-        GUI.Label(new Rect(Screen.width / 2 - 100, 100, Screen.width - 40, Screen.height - 40), "Your Coins: " + playerCoin, guiStyleCoin);
+        GUI.Label(new Rect(Screen.width / 2 - 100, 100, Screen.width - 40, Screen.height - 40), LangHelper.GetInstance().GetString("YourCoinLabel") + playerCoin, guiStyleCoin);
 
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, 160, 200, 40), "Retry?", GUI.skin.GetStyle("button")))
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 160, 200, 40), LangHelper.GetInstance().GetString("RetryButton"), GUI.skin.GetStyle("button")))
             Application.LoadLevel("Level");
 
-        if (GUI.Button(new Rect(Screen.width / 2 - 100, 210, 200, 40), "Exit", GUI.skin.GetStyle("button")))
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, 210, 200, 40), LangHelper.GetInstance().GetString("ExitButton"), GUI.skin.GetStyle("button")))
             Application.LoadLevel("Menu");
     }
 }

@@ -29,9 +29,9 @@ public class SoundEffectsHelper : MonoBehaviour
 
     private AudioSource audioSource;
 
-    public bool IsMute;
+    public bool HasMusic;
 
-    public bool IsSound;
+    public bool HasSound;
 
     void Awake()
     {
@@ -39,38 +39,39 @@ public class SoundEffectsHelper : MonoBehaviour
         if (Instance != null)
             Debug.LogError("Multiple instances of SoundEffectsHelper!");
 
-        this.IsMute = PlayerPrefs.GetString("IsMute").Equals("Off");
-        this.IsSound = PlayerPrefs.GetString("IsSound").Equals("On");
+        this.HasMusic = PlayerPrefs.GetString("HasMusic").Equals("On");
+
+        this.HasSound = PlayerPrefs.GetString("HasSound").Equals("On");
 
         Instance = this;
     }
 
-    public void SetMute()
+    public void SetMusic()
     {
-        Instance.IsMute = !Instance.IsMute;
+        Instance.HasMusic = !Instance.HasMusic;
 
-        if (Instance.IsMute)
-            PlayerPrefs.SetString("IsMute", "On");
+        if (Instance.HasMusic)
+            PlayerPrefs.SetString("HasMusic", "On");
         else
-            PlayerPrefs.SetString("IsMute", "Off");
+            PlayerPrefs.SetString("HasMusic", "Off");
+
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.mute = !Instance.HasMusic;
     }
 
     public void SetSound()
     {
-        Instance.IsSound = !Instance.IsSound;
+        Instance.HasSound = !Instance.HasSound;
 
-        if (Instance.IsSound)
-            PlayerPrefs.SetString("IsSound", "On");
+        if (Instance.HasSound)
+            PlayerPrefs.SetString("HasSound", "On");
         else
-            PlayerPrefs.SetString("IsSound", "Off");
-
-        audioSource = gameObject.GetComponent<AudioSource>();
-        audioSource.mute = Instance.IsSound;
+            PlayerPrefs.SetString("HasSound", "Off");
     }
 
     public void SetPitchBackgroundSound(float pitch)
     {
-        if (!SoundEffectsHelper.Instance.IsMute)
+        if (!SoundEffectsHelper.Instance.HasMusic)
         {
             audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.pitch = pitch;
@@ -94,7 +95,7 @@ public class SoundEffectsHelper : MonoBehaviour
                 break;
         }
 
-        if (!IsMute && originalClip != null)
+        if (HasSound && originalClip != null)
             AudioSource.PlayClipAtPoint(originalClip, transform.position);// As it is not 3D audio clip, position doesn't matter.
     }
 
@@ -120,7 +121,7 @@ public class SoundEffectsHelper : MonoBehaviour
         audioSource.priority = 110;
         audioSource.volume = volume;
         audioSource.loop = true;
-        audioSource.mute = IsSound;
+        audioSource.mute = !HasMusic;
         audioSource.PlayDelayed(playDelayed);
     }
 }

@@ -46,7 +46,7 @@ public class VelocityController : MonoBehaviour
             if (DestroyTime >= DestroyTimeMin)
                 DestroyTime -= destroyTime;
 
-            Debug.Log(string.Format("Speed: {0}, SpawnTime: {1}, DestroyTime: {2}", Speed, SpawnTime, DestroyTime));
+           // Debug.Log(string.Format("Speed: {0}, SpawnTime: {1}, DestroyTime: {2}", Speed, SpawnTime, DestroyTime));
         }
         else
             IsBoostSpeedMax = true;

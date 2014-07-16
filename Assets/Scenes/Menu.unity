@@ -585,6 +585,7 @@ MonoBehaviour:
   menuSound: {fileID: 8300000, guid: 5f5a533d04131b94bab70c6218a39ee6, type: 3}
   coinSound: {fileID: 0}
   volume: 1
+  playDelayed: 1
   IsMute: 0
   IsSound: 0
 --- !u!4 &2070184947

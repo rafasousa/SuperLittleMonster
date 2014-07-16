@@ -5,7 +5,9 @@ public class PlayerControl : MonoBehaviour
 {
     public bool jump = false;
 
-    public float jumpForce = 600f;
+    public bool jumping = false;
+
+    public float jumpForce = 1250f;
 
     private Animator anim;
 
@@ -14,6 +16,12 @@ public class PlayerControl : MonoBehaviour
     private bool grounded = false;
 
     public float position = -3.889894f;
+
+    public float gravity = 0f;
+
+    public float gravityMax = 3f;
+
+    public float gravityMin = 2f;
 
     void Awake()
     {
@@ -32,7 +40,22 @@ public class PlayerControl : MonoBehaviour
         {
             jump = true;
 
+            // Set the Jump animator trigger parameter.
+            anim.SetTrigger("Jump");
+
             SoundEffectsHelper.Instance.MakeSound(SoundType.Jump);
+        }
+
+        if ((Input.GetButton("Jump") || Input.GetKey(KeyCode.Mouse0)) && gravity >= gravityMin)
+        {
+            jumping = true;
+            gravity -= 0.01f;
+        }
+
+        if (Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Mouse0) || gravity <= gravityMin)
+        {
+            jumping = false;
+            gravity = gravityMax;
         }
 
         if (transform.position.x < position && grounded)
@@ -41,12 +64,14 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (jumping)
+            rigidbody2D.gravityScale = gravity;
+        else
+            rigidbody2D.gravityScale = gravityMax;
+
         // If the player should jump...
         if (jump)
         {
-            // Set the Jump animator trigger parameter.
-            anim.SetTrigger("Jump");
-
             // Add a vertical velocity to the player jump.
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce / 100);
 
