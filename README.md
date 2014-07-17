@@ -9,10 +9,10 @@ Powered By to[] Studios:
 
 The adventure is going to begin:
 
-![Alt text](http://galesso.me/flappyandfire/preview/Menu.jpg "Menu")
+![Alt text](http://galesso.me/slm/SLM0.jpg "Menu")
 
-Go as far as you can with 'D':
+Go as far as you can with 'M':
 
-![Alt text](http://galesso.me/flappyandfire/preview/Adventure.jpg "Menu")
+![Alt text](http://galesso.me/slm/SLM2.jpg "Adventure")
 
 Version 1.0
