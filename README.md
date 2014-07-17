@@ -1,7 +1,7 @@
 Super Little Monster
 ===============
 
-'M' the Little Monster need save his little friends and take the major number the coins and score.
+'M' the Little Monster needs to save his little friends and take the major number of coins and go as far as it can to get a high score.
 
 Powered By to[] Studios:
 
