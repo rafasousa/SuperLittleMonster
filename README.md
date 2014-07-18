@@ -5,7 +5,7 @@ Super Little Monster
 
 Powered By to[] Studios:
 
-![Alt text](http://galesso.me/flappyandfire/preview/ToArray.jpg "2[] Studios")
+![Alt text](http://galesso.me/flappyandfire/preview/ToArray.jpg "to[] Studios")
 
 The adventure is going to begin:
 
