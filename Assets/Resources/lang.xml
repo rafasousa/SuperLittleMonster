@@ -2,13 +2,13 @@
 <languages>
   <English>
     <string name="AppName">Super Little Monster</string>
-    <string name="AppDescription">This project is about one game developed in Unity3d, that one little monster need save his little friends and take the major number the coins and score.</string>
+    <string name="AppDescription">'M' the Little Monster needs to save his little friends and take the major number of coins and go as far as it can to get a high score. Powered By to[] Studio.</string>
     <string name="PlayButton">Play</string>
     <string name="OptionButton">Options</string>
     <string name="ExitButton">Quit</string>
     
     <string name="ConfirmMessageExit">
-Do you want 
+Do you want really
 to quit?</string>
     <string name="ConfirmExitButton">Yes</string>
     <string name="CancelExitButton">No</string>
@@ -16,15 +16,15 @@ to quit?</string>
     <string name="SoundButton">Sound - </string>
     <string name="MusicButton">Music - </string>
     <string name="BackButton">Back</string>
-    <string name="RetryButton">Retry?</string>
+    <string name="RetryButton">Try Again?</string>
     
     <string name="OptionLabel">Options</string>
-    <string name="YourScoreLabel">    Score: </string>
-    <string name="YourCoinLabel">      Coins: </string>
+    <string name="YourScoreLabel">Score: </string>
+    <string name="YourCoinLabel">Coins: </string>
     <string name="ScoreLabel">Score: </string>
     <string name="CoinLabel">Coins: </string>
     <string name="BestScoreLabel">High Score: </string>
-    <string name="TotalCoinsLabel">  Coins: </string>    
+    <string name="TotalCoinsLabel">Coins: </string>    
 
     <string name="OffLabel">Off</string>
     <string name="OnLabel">On</string>
@@ -34,27 +34,27 @@ to quit?</string>
 
   <Portuguese>
     <string name="AppName">Super Little Monster</string>
-    <string name="AppDescription">This project is about one game developed in Unity3d, that one little monster need save his little friends and take the major number the coins and score.</string>
+    <string name="AppDescription">'M' the Little Monster needs to save his little friends and take the major number of coins and go as far as it can to get a high score. Powered By to[] Studio.</string>
     <string name="PlayButton">Jogar</string>
-    <string name="OptionButton">Opcoes</string>
+    <string name="OptionButton">Opções</string>
     
     <string name="ExitButton">Sair</string>
     <string name="ConfirmMessageExit">
-Voce deseja sair?</string>
+Você deseja sair?</string>
     <string name="ConfirmExitButton">Sim</string>
-    <string name="CancelExitButton">Nao</string>
+    <string name="CancelExitButton">Não</string>
 
     <string name="SoundButton">Audio - </string>
-    <string name="MusicButton">Musica - </string>
+    <string name="MusicButton">Música - </string>
     <string name="BackButton">Voltar</string>
     <string name="RetryButton">Reiniciar?</string>
     
-    <string name="OptionLabel">Opcoes</string>
-    <string name="YourScoreLabel">Pontuacao: </string>
-    <string name="YourCoinLabel">    Moedas: </string>
-    <string name="ScoreLabel">Score: </string>
+    <string name="OptionLabel">Opções</string>
+    <string name="YourScoreLabel">Pontuação: </string>
+    <string name="YourCoinLabel">Moedas: </string>
+    <string name="ScoreLabel">Pontuação: </string>
     <string name="CoinLabel">Moedas: </string>
-    <string name="BestScoreLabel">  Recorde: </string>
+    <string name="BestScoreLabel">Recorde: </string>
     <string name="TotalCoinsLabel">Moedas: </string>
 
     <string name="OffLabel">Off</string>

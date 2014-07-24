@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05b218ef6de5be4aa0185515db17986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guiSkin: {fileID: 11400000, guid: ec2e182fe102b3541b98831943d551ef, type: 2}
+  guiSkin: {fileID: 11400000, guid: 53568722b13532f4f8967fce9bef488e, type: 2}
   playerCoin: 0
   playerScore: 0
   playerMonster: 0
@@ -545,7 +545,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: b78690a8e186644429867cd05459bf92, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.38964891
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b78690a8e186644429867cd05459bf92, type: 2}
       propertyPath: m_LocalPosition.y
@@ -585,7 +585,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: b78690a8e186644429867cd05459bf92, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.20835489
+      value: -.0176293682
       objectReference: {fileID: 0}
     - target: {fileID: 5800000, guid: b78690a8e186644429867cd05459bf92, type: 2}
       propertyPath: m_Radius
@@ -595,7 +595,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 400000, guid: b78690a8e186644429867cd05459bf92, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b78690a8e186644429867cd05459bf92, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5800000, guid: b78690a8e186644429867cd05459bf92, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b78690a8e186644429867cd05459bf92, type: 2}
   m_RootGameObject: {fileID: 1987047995}
   m_IsPrefabParent: 0
@@ -719,8 +728,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 479386464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.6805906, y: -1.83900237, z: 0}
-  m_LocalScale: {x: 1, y: 20, z: 1}
+  m_LocalPosition: {x: -11.7146482, y: .766575098, z: 0}
+  m_LocalScale: {x: 1, y: 18, z: 1}
   m_Children: []
   m_Father: {fileID: 25166102}
 --- !u!114 &479386469
@@ -1420,7 +1429,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 869084229}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: 3.81594348, y: -6.63936996, z: 0}
+  m_LocalPosition: {x: 3.68319368, y: -7.62769175, z: 0}
   m_LocalScale: {x: 1, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 25166102}
@@ -2032,7 +2041,7 @@ Transform:
   m_PrefabInternal: {fileID: 433511264}
   m_GameObject: {fileID: 1221602102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.20835489, z: 0}
+  m_LocalPosition: {x: 0, y: -.0176293682, z: 0}
   m_LocalScale: {x: .581623852, y: .581623316, z: 1}
   m_Children: []
   m_Father: {fileID: 1987047998}
@@ -2596,7 +2605,7 @@ MonoBehaviour:
   menuSound: {fileID: 0}
   coinSound: {fileID: 8300000, guid: e6112552c28d23544be46f4c25a97f46, type: 3}
   volume: 1
-  playDelayed: 1
+  playDelayed: 0
   HasMusic: 0
   HasSound: 0
 --- !u!114 &1537215878
@@ -3286,7 +3295,6 @@ GameObject:
   - 212: {fileID: 1987047997}
   - 95: {fileID: 1987047996}
   - 50: {fileID: 1987048000}
-  - 58: {fileID: 1987047999}
   - 114: {fileID: 1987048001}
   - 60: {fileID: 1987048002}
   m_Layer: 0
@@ -3342,23 +3350,11 @@ Transform:
   m_PrefabInternal: {fileID: 433511264}
   m_GameObject: {fileID: 1987047995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.38964891, y: -2.95345497, z: 0}
-  m_LocalScale: {x: 1.71932399, y: 1.71932602, z: 1}
+  m_LocalPosition: {x: -6, y: -2.95345497, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1221602103}
   m_Father: {fileID: 1884478519}
---- !u!58 &1987047999
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800000, guid: b78690a8e186644429867cd05459bf92,
-    type: 2}
-  m_PrefabInternal: {fileID: 433511264}
-  m_GameObject: {fileID: 1987047995}
-  m_Enabled: 0
-  m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
-  m_IsTrigger: 0
-  m_Radius: .478846192
-  m_Center: {x: 0, y: 0}
 --- !u!50 &1987048000
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3388,7 +3384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 0
-  jumping: 0
   jumpForce: 1250
   position: -3.88989401
   gravity: 0
@@ -3405,30 +3400,32 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: .403340012, y: .0577197745}
-      - {x: .416823864, y: .513211608}
-      - {x: .270315588, y: .753423333}
-      - {x: .289475083, y: .810352027}
-      - {x: .184527978, y: .843654692}
-      - {x: .152389824, y: .793269396}
-      - {x: .147202045, y: .84871459}
-      - {x: .0652024746, y: .857259572}
-      - {x: .057326857, y: .814884841}
-      - {x: .0280082822, y: .847742081}
-      - {x: -.0634055883, y: .847143292}
-      - {x: -.0734795481, y: .794673026}
-      - {x: -.0946428031, y: .818641663}
-      - {x: -.174366936, y: .812318623}
-      - {x: -.180618733, y: .748139739}
-      - {x: -.229113832, y: .772766411}
-      - {x: -.30474028, y: .730133176}
-      - {x: -.285984337, y: .679976881}
-      - {x: -.325628966, y: .700531781}
-      - {x: -.361357272, y: .654536664}
-      - {x: -.332846165, y: .600815713}
-      - {x: -.38859123, y: .515046239}
-      - {x: -.411537766, y: .395847052}
-      - {x: -.384903729, y: .022751553}
+    - - {x: -.641228199, y: .419557571}
+      - {x: -.474608421, y: .266028404}
+      - {x: -.528719425, y: .0111837387}
+      - {x: .659151554, y: 6.10351562e-05}
+      - {x: .708292961, y: .853511572}
+      - {x: .607620239, y: 1.13521099}
+      - {x: .450561523, y: 1.27226257}
+      - {x: .45656395, y: 1.42154551}
+      - {x: .483529091, y: 1.52080429}
+      - {x: .385435104, y: 1.6067282}
+      - {x: .279114246, y: 1.53905547}
+      - {x: .271864891, y: 1.60476232}
+      - {x: .154062271, y: 1.66352034}
+      - {x: .0895671844, y: 1.57325947}
+      - {x: -.0941853523, y: 1.64301372}
+      - {x: -.148229599, y: 1.50260198}
+      - {x: -.204569817, y: 1.54855609}
+      - {x: -.328264236, y: 1.55102706}
+      - {x: -.352104664, y: 1.42968643}
+      - {x: -.470952988, y: 1.45871007}
+      - {x: -.559771061, y: 1.37650311}
+      - {x: -.541014671, y: 1.27358198}
+      - {x: -.620233059, y: 1.32051921}
+      - {x: -.677946568, y: 1.24814188}
+      - {x: -.587686539, y: 1.03999603}
+      - {x: -.713764668, y: .809165001}
 --- !u!1 &2006273387
 GameObject:
   m_ObjectHideFlags: 0

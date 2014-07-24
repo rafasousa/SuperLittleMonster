@@ -55,8 +55,13 @@ public class SoundEffectsHelper : MonoBehaviour
         else
             PlayerPrefs.SetString("HasMusic", "Off");
 
+        SetMute(!Instance.HasMusic);
+    }
+
+    public void SetMute(bool mute)
+    {
         audioSource = gameObject.GetComponent<AudioSource>();
-        audioSource.mute = !Instance.HasMusic;
+        audioSource.mute = mute;
     }
 
     public void SetSound()

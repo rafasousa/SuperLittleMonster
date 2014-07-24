@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a7c177f5a5e4043a87840f46563dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guiSkin: {fileID: 11400000, guid: ec2e182fe102b3541b98831943d551ef, type: 2}
+  guiSkin: {fileID: 11400000, guid: 53568722b13532f4f8967fce9bef488e, type: 2}
 --- !u!1 &1778752376
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,10 +582,10 @@ MonoBehaviour:
   playerJumpSound: {fileID: 0}
   playerRunSound: {fileID: 0}
   gameOverSound: {fileID: 0}
-  menuSound: {fileID: 8300000, guid: 5f5a533d04131b94bab70c6218a39ee6, type: 3}
+  menuSound: {fileID: 8300000, guid: 76e94dcd12cc09448b0548eb1be4d177, type: 3}
   coinSound: {fileID: 0}
   volume: 1
-  playDelayed: 1
+  playDelayed: 0
   HasMusic: 0
   HasSound: 0
 --- !u!4 &2070184947

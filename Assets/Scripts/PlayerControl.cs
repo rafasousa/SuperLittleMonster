@@ -5,7 +5,13 @@ public class PlayerControl : MonoBehaviour
 {
     public bool jump = false;
 
-    public bool jumping = false;
+    private bool jumping = false;
+
+    private bool jumpDouble = false;
+
+    private float jumpCount = 0f;
+
+    private float jumpLimit = 2f;
 
     public float jumpForce = 1250f;
 
@@ -35,13 +41,18 @@ public class PlayerControl : MonoBehaviour
         // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-        // If the jump button is pressed and the player is grounded then the player should jump.
-        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Mouse0) && grounded)
-        {
-            jump = true;
+        if (jumpCount >= jumpLimit && grounded)
+            jumpCount = 0;
 
-            // Set the Jump animator trigger parameter.
-            anim.SetTrigger("Jump");
+        jumpDouble = jumpCount < jumpLimit;
+
+        // If the jump button is pressed and the player is grounded then the player should jump.
+        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Mouse0)) && (grounded || jumpDouble))
+        {
+            jump = true; jumpCount++;
+
+            if (grounded)
+                anim.SetTrigger("Jump"); // Set the Jump animator trigger parameter.
 
             SoundEffectsHelper.Instance.MakeSound(SoundType.Jump);
         }

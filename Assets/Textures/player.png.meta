@@ -48,253 +48,145 @@ TextureImporter:
     - name: player_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 1418
-        width: 81
-        height: 85
+        x: 0
+        y: 521
+        width: 140
+        height: 149
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_1
       rect:
         serializedVersion: 2
-        x: 141
-        y: 1418
-        width: 81
-        height: 88
+        x: 169
+        y: 521
+        width: 141
+        height: 155
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_2
       rect:
         serializedVersion: 2
-        x: 239
-        y: 1418
-        width: 81
-        height: 88
+        x: 339
+        y: 521
+        width: 141
+        height: 153
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_3
       rect:
         serializedVersion: 2
-        x: 345
-        y: 1418
-        width: 83
-        height: 89
+        x: 509
+        y: 521
+        width: 141
+        height: 157
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_4
       rect:
         serializedVersion: 2
-        x: 454
-        y: 1418
-        width: 83
-        height: 88
+        x: 679
+        y: 521
+        width: 141
+        height: 154
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_5
       rect:
         serializedVersion: 2
-        x: 572
-        y: 1418
-        width: 83
-        height: 89
+        x: 848
+        y: 521
+        width: 141
+        height: 156
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_6
       rect:
         serializedVersion: 2
-        x: 43
-        y: 1283
-        width: 81
-        height: 88
+        x: 2
+        y: 280
+        width: 141
+        height: 154
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
     - name: player_7
       rect:
         serializedVersion: 2
-        x: 142
-        y: 1283
-        width: 81
-        height: 91
+        x: 177
+        y: 280
+        width: 141
+        height: 159
       alignment: 7
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 0}
     - name: player_8
       rect:
         serializedVersion: 2
-        x: 248
-        y: 1283
-        width: 83
-        height: 88
+        x: 352
+        y: 280
+        width: 141
+        height: 155
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_9
       rect:
         serializedVersion: 2
-        x: 362
-        y: 1283
-        width: 81
-        height: 91
+        x: 527
+        y: 280
+        width: 141
+        height: 159
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_10
       rect:
         serializedVersion: 2
-        x: 471
-        y: 1283
-        width: 81
-        height: 85
+        x: 702
+        y: 280
+        width: 141
+        height: 150
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_11
       rect:
         serializedVersion: 2
-        x: 54
-        y: 1125
-        width: 82
-        height: 99
+        x: 20
+        y: 0
+        width: 141
+        height: 171
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_12
       rect:
         serializedVersion: 2
-        x: 157
-        y: 1125
-        width: 82
-        height: 115
+        x: 200
+        y: 0
+        width: 141
+        height: 200
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_13
       rect:
         serializedVersion: 2
-        x: 270
-        y: 1125
-        width: 83
-        height: 127
+        x: 379
+        y: 0
+        width: 141
+        height: 222
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_14
       rect:
         serializedVersion: 2
-        x: 385
-        y: 1125
-        width: 83
-        height: 116
+        x: 559
+        y: 0
+        width: 141
+        height: 203
       alignment: 7
       pivot: {x: 0, y: 0}
     - name: player_15
       rect:
         serializedVersion: 2
-        x: 493
-        y: 1125
-        width: 81
-        height: 102
-      alignment: 7
-      pivot: {x: .5, y: 0}
-    - name: player_16
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 953
-        width: 81
-        height: 85
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_17
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 932
-        width: 129
-        height: 125
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_18
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 901
-        width: 184
-        height: 178
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 557
-        width: 298
-        height: 299
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_20
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 557
-        width: 301
-        height: 302
-      alignment: 7
-      pivot: {x: .5, y: 0}
-    - name: player_21
-      rect:
-        serializedVersion: 2
-        x: 702
-        y: 563
-        width: 298
-        height: 303
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_22
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 221
-        width: 299
-        height: 296
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_23
-      rect:
-        serializedVersion: 2
-        x: 338
-        y: 219
-        width: 300
-        height: 295
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_24
-      rect:
-        serializedVersion: 2
-        x: 678
-        y: 226
-        width: 301
-        height: 288
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_25
-      rect:
-        serializedVersion: 2
-        x: 41
+        x: 738
         y: 0
-        width: 185
-        height: 177
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_26
-      rect:
-        serializedVersion: 2
-        x: 338
-        y: 7
-        width: 128
-        height: 125
-      alignment: 7
-      pivot: {x: 0, y: 0}
-    - name: player_27
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 20
-        width: 83
-        height: 85
+        width: 141
+        height: 176
       alignment: 7
       pivot: {x: 0, y: 0}
   spritePackingTag: 

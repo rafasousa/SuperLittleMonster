@@ -10,7 +10,7 @@ PlayerSettings:
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: Rafa Sousa Games
+  companyName: to[] Studio
   productName: Super Little Monster
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -68,12 +68,12 @@ PlayerSettings:
     width: 0
     height: 0
   m_SupportedAspectRatios:
-    4:3: 1
-    5:4: 1
+    4:3: 0
+    5:4: 0
     16:10: 1
     16:9: 1
-    Others: 1
-  iPhoneBundleIdentifier: br.comrafaelsousa.supermonster
+    Others: 0
+  iPhoneBundleIdentifier: com.toarray.superlittlemonster
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: e9aa2c9ecf9d71e409b3931af806ef79
@@ -97,7 +97,7 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
-  iPhoneSplashScreen: {fileID: 0}
+  iPhoneSplashScreen: {fileID: 2800000, guid: 80def587b01104c40832201435e0a4f6, type: 3}
   iPhoneHighResSplashScreen: {fileID: 0}
   iPhoneTallHighResSplashScreen: {fileID: 0}
   iPadPortraitSplashScreen: {fileID: 0}
@@ -106,7 +106,7 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: 
+  AndroidKeystoreName: C:/inetpub/wwwroot/Unity/Super Little Monster/Publish/Android/superlittlemonster.keystore
   AndroidKeyaliasName: 
   resolutionDialogBanner: {fileID: 2800000, guid: 78d5423dd0acd4c428ceee8b8441fd8a,
     type: 3}
@@ -125,6 +125,15 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
     m_DynamicBatching: 1
+  - m_BuildTarget: iPhone
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
+  - m_BuildTarget: FlashPlayer
+    m_StaticBatching: 0
+    m_DynamicBatching: 0
+  - m_BuildTarget: Web
+    m_StaticBatching: 0
+    m_DynamicBatching: 0
   webPlayerTemplate: APPLICATION:Black Background
   m_TemplateCustomTags: {}
   wiiRegion: 1
@@ -164,6 +173,7 @@ PlayerSettings:
   spritePackerPolicy: 
   scriptingDefineSymbols:
     4: 0.5
+    12: 
   metroPackageName: SuperLittleMonster
   metroPackageLogo: 
   metroPackageVersion: 1.0.0.0
