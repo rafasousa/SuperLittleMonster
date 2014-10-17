@@ -59,8 +59,8 @@ public class MainMenu : MonoBehaviour
         var guiStyleCoin = new GUIStyle(GUI.skin.GetStyle("label"));
         guiStyleCoin.normal.textColor = Color.yellow;
 
-        GUI.Label(new Rect(20, Screen.height - 100, Screen.width, 100), LangHelper.GetInstance().GetString("BestScoreLabel") + bestScore, guiStyleScore);
-        GUI.Label(new Rect(Screen.width - 400, Screen.height - 100, Screen.width, 100), LangHelper.GetInstance().GetString("TotalCoinsLabel") + totalCoin, guiStyleCoin);
+		GUI.Label(new Rect(20, Screen.height - guiStyleScore.lineHeight - 20, Screen.width, Screen.height), LangHelper.GetInstance().GetString("BestScoreLabel") + bestScore, guiStyleScore);
+		GUI.Label(new Rect(Screen.width - (Screen.width / 3.5f), Screen.height - guiStyleCoin.lineHeight - 20, Screen.width, 100), LangHelper.GetInstance().GetString("TotalCoinsLabel") + totalCoin, guiStyleCoin);
     }
 
     public void OptionsMenuGUI()
@@ -80,23 +80,23 @@ public class MainMenu : MonoBehaviour
 
         if (showDropLanguages)
         {
-            scrollViewVector = GUI.BeginScrollView(new Rect(HUD.Left + 250, HUD.GetPositionTop(3), 120, 115), scrollViewVector, new Rect(0, 0, 100, 200));
+			scrollViewVector = GUI.BeginScrollView(new Rect(HUD.Left + HUD.Width - 20, HUD.GetPositionTop(3), HUD.Width / 4,  HUD.Height), scrollViewVector, new Rect(0, 0, HUD.Width / 5.5f, (HUD.Height * languages.Length)));
 
             for (index = 0; index < languages.Length; index++)
             {
-                if (GUI.Button(new Rect(0, index * HUD.Height, 100, HUD.Height), ""))
+				if (GUI.Button(new Rect(0, index * HUD.Height, HUD.Width / 5, HUD.Height), ""))
                 {
                     showDropLanguages = false; wichLanguage = index;
                     PlayerPrefs.SetString("Language", languages[index]);
                     LangHelper.GetInstance().ChangeLanguage();
                 }
 
-                GUI.Label(new Rect(12, index * HUD.Height, 80, HUD.Height), Resources.Load(languages[index]) as Texture);
+				GUI.Label(new Rect(12, index * HUD.Height, HUD.Width, HUD.Height), Resources.Load(languages[index]) as Texture);
             }
             GUI.EndScrollView();
         }
         else
-            GUI.Label(new Rect(HUD.Left + 240, HUD.GetPositionTop(3), 100, HUD.Height), Resources.Load(languages[wichLanguage]) as Texture);
+			GUI.Label(new Rect(HUD.Left + HUD.Width - 10, HUD.GetPositionTop(3), HUD.Width, HUD.Height), Resources.Load(languages[wichLanguage]) as Texture);
 
         if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(4), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("BackButton"), GUI.skin.GetStyle("button")))
             this.currentGUIMethod = MainMenuGUI;
@@ -106,15 +106,15 @@ public class MainMenu : MonoBehaviour
     {
         GUI.skin = this.guiSkin;
         
-        GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), LangHelper.GetInstance().GetString("ConfirmMessageExit"), GUI.skin.GetStyle("box"));
+		GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), LangHelper.GetInstance().GetString("ConfirmMessageExit"), GUI.skin.GetStyle("box"));
 
-        if (GUI.Button(new Rect(HUD.Left - 60, HUD.GetPositionTop(2), HUD.Width - 100, HUD.Height), LangHelper.GetInstance().GetString("ConfirmExitButton"), GUI.skin.GetStyle("button")))
+        if (GUI.Button(new Rect(HUD.Left + 20, HUD.GetPositionTop(2), HUD.Width / 2, HUD.Height), LangHelper.GetInstance().GetString("ConfirmExitButton"), GUI.skin.GetStyle("button")))
         {
             PlayerPrefs.Save();
             Application.Quit();
         }
 
-        if (GUI.Button(new Rect(HUD.Left + 120, HUD.GetPositionTop(2), HUD.Width - 100, HUD.Height), LangHelper.GetInstance().GetString("CancelExitButton"), GUI.skin.GetStyle("button")))
+		if (GUI.Button(new Rect((HUD.Left + HUD.Left) - 20, HUD.GetPositionTop(2), HUD.Width / 2, HUD.Height), LangHelper.GetInstance().GetString("CancelExitButton"), GUI.skin.GetStyle("button")))
             this.currentGUIMethod = MainMenuGUI;
     }
 

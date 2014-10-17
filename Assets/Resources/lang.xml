@@ -8,8 +8,7 @@
     <string name="ExitButton">Quit</string>
     
     <string name="ConfirmMessageExit">
-Do you want really
-to quit?</string>
+Do you want really to quit?</string>
     <string name="ConfirmExitButton">Yes</string>
     <string name="CancelExitButton">No</string>
 

@@ -17,21 +17,19 @@ public class HUD : MonoBehaviour
 
     public static float AverageScreenY = Screen.height / 2;
 
-    public static float Width = (AverageScreenX / 3) + 60;
+    public static float Width = (AverageScreenX / 1);
 
-    public static float Height = (AverageScreenY / 3);
-
-    public static int LabelHeight = 200;
+    public static float Height = (AverageScreenY / 3.6f);
 
     public static float Left = AverageScreenX - (Width) / 2;
 
-    public static int TitleSize = Screen.width / 12;
+    public static int TitleSize = Screen.width / 14;
 
     public static int LabelSize = Screen.width / 20;
 
-    public static int ButtonSize = Screen.width / 25;
+    public static int ButtonSize = Screen.width / 16;
 
-    public static float Margin = 20f;
+    public static float Margin = 5f;
 
     private delegate void GUIMethod();
 
@@ -68,17 +66,17 @@ public class HUD : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.skin = guiSkin;
+        GUI.skin = guiSkin; 
 
         //guiSkin.label.fontSize = HUD.LabelSize;
-        //guiSkin.button.fontSize = HUD.ButtonSize;
+        guiSkin.button.fontSize = HUD.ButtonSize;
 
         var guiStyle = new GUIStyle(GUI.skin.GetStyle("label"));
         guiStyle.normal.textColor = Color.yellow;
 
-        GUI.Label(new Rect(10, 10, 350, HUD.LabelHeight), LangHelper.GetInstance().GetString("CoinLabel") + playerCoin, guiStyle);
+		GUI.Label(new Rect(10, 10, Screen.width, HUD.Height), LangHelper.GetInstance().GetString("CoinLabel") + playerCoin, guiStyle);
 
-        GUI.Label(new Rect(10, 60, Screen.width, HUD.LabelHeight), LangHelper.GetInstance().GetString("ScoreLabel") + (int)(playerScore * 100));
+		GUI.Label(new Rect(10, guiStyle.lineHeight + 10, Screen.width, HUD.Height), LangHelper.GetInstance().GetString("ScoreLabel") + (int)(playerScore * 100));
 
         if (pause)
             PauseMenuGUI();
@@ -129,6 +127,10 @@ public class HUD : MonoBehaviour
 
     public static float GetPositionTop(int multiplier = 1)
     {
-        return (Height * multiplier) + (Margin * multiplier);
+		float result = (Height * multiplier);
+
+		result = (result * 1.3f) + 20;
+
+		return result;
     }
 }

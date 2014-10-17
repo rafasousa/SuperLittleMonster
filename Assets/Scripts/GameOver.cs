@@ -30,7 +30,7 @@ public class GameOver : MonoBehaviour
         GUI.skin = guiSkin;
 
         //guiSkin.label.fontSize = HUD.LabelSize;
-        //guiSkin.button.fontSize = HUD.ButtonSize;
+		guiSkin.button.fontSize = HUD.ButtonSize;
 
         var guiStyleScore = new GUIStyle(GUI.skin.GetStyle("label"));
         guiStyleScore.normal.textColor = Color.yellow;
@@ -40,9 +40,9 @@ public class GameOver : MonoBehaviour
 
         GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), "GAME OVER", GUI.skin.GetStyle("box"));
         
-        GUI.Label(new Rect(HUD.Left - 30, HUD.GetPositionTop() - 20, Screen.width, HUD.Height), LangHelper.GetInstance().GetString("YourScoreLabel") + playerScore, guiStyleScore);
+		GUI.Label(new Rect(HUD.Left + 35, HUD.GetPositionTop(1)  - guiStyleScore.lineHeight + 20, Screen.width, HUD.Height), LangHelper.GetInstance().GetString("YourScoreLabel") + playerScore, guiStyleScore);
 
-        GUI.Label(new Rect(HUD.Left - 30, HUD.GetPositionTop(2) - 60, Screen.width, HUD.Height), LangHelper.GetInstance().GetString("YourCoinLabel") + playerCoin, guiStyleCoin);
+		GUI.Label(new Rect(HUD.Left + 35, HUD.GetPositionTop(2) - guiStyleCoin.lineHeight - 10, Screen.width, HUD.Height), LangHelper.GetInstance().GetString("YourCoinLabel") + playerCoin, guiStyleCoin);
 
 
         if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(2), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("RetryButton"), GUI.skin.GetStyle("button")))
