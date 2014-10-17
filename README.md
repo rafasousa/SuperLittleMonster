@@ -3,7 +3,7 @@ Super Little Monster
 
 'M' the Little Monster needs to save his little friends and take the major number of coins and go as far as it can to get a high score.
 
-Powered By to[] Studios:
+Powered By toArray Studio:
 
 ![Alt text](http://galesso.me/flappyandfire/preview/ToArray.jpg "to[] Studios")
 
