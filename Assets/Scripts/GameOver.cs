@@ -29,8 +29,8 @@ public class GameOver : MonoBehaviour
     {
         GUI.skin = guiSkin;
 
-        //guiSkin.label.fontSize = HUD.LabelSize;
-		guiSkin.button.fontSize = HUD.ButtonSize;
+        guiSkin.label.fontSize = HUD.LabelSize;
+        guiSkin.button.fontSize = HUD.ButtonSize;
 
         var guiStyleScore = new GUIStyle(GUI.skin.GetStyle("label"));
         guiStyleScore.normal.textColor = Color.yellow;

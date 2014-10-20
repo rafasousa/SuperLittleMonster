@@ -66,9 +66,9 @@ public class HUD : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.skin = guiSkin; 
+        GUI.skin = guiSkin;
 
-        //guiSkin.label.fontSize = HUD.LabelSize;
+        guiSkin.label.fontSize = HUD.LabelSize;
         guiSkin.button.fontSize = HUD.ButtonSize;
 
         var guiStyle = new GUIStyle(GUI.skin.GetStyle("label"));

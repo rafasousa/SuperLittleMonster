@@ -29,65 +29,74 @@ public class PlayerControl : MonoBehaviour
 
     public float gravityMin = 1.5f;
 
+    public bool isMenu = false;
+
     void Awake()
     {
         // Setting up references.
         groundCheck = transform.Find("groundCheck");
         anim = GetComponent<Animator>();
+        anim.SetFloat("Run", !isMenu ? 1 : 0);
     }
 
     void Update()
     {
-        // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-
-        if (jumpCount >= jumpLimit && grounded)
-            jumpCount = 0;
-
-        jumpDouble = jumpCount < jumpLimit;
-
-        // If the jump button is pressed and the player is grounded then the player should jump.
-        if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Mouse0)) && (grounded || jumpDouble))
+        if (!isMenu)
         {
-            jump = true; jumpCount++;
+            // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
+            grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-            if (grounded)
-                anim.SetTrigger("Jump"); // Set the Jump animator trigger parameter.
+            if (jumpCount >= jumpLimit && grounded)
+                jumpCount = 0;
 
-            SoundEffectsHelper.Instance.MakeSound(SoundType.Jump);
+            jumpDouble = jumpCount < jumpLimit;
+
+            // If the jump button is pressed and the player is grounded then the player should jump.
+            if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Mouse0)) && (grounded || jumpDouble))
+            {
+                jump = true; jumpCount++;
+
+                if (grounded)
+                    anim.SetTrigger("Jump"); // Set the Jump animator trigger parameter.
+
+                SoundEffectsHelper.Instance.MakeSound(SoundType.Jump);
+            }
+
+            if ((Input.GetButton("Jump") || Input.GetKey(KeyCode.Mouse0)) && gravity >= gravityMin)
+            {
+                jumping = true;
+                gravity -= 0.1f;
+            }
+
+            if (Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Mouse0) || gravity <= gravityMin)
+            {
+                jumping = false;
+                gravity = gravityMax;
+            }
+
+            if (transform.position.x < position && grounded && !HUD.pause)
+                transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
         }
-
-        if ((Input.GetButton("Jump") || Input.GetKey(KeyCode.Mouse0)) && gravity >= gravityMin)
-        {
-            jumping = true;
-            gravity -= 0.1f;
-        }
-
-        if (Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Mouse0) || gravity <= gravityMin)
-        {
-            jumping = false;
-            gravity = gravityMax;
-        }
-
-        if (transform.position.x < position && grounded && !HUD.pause)
-            transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
     }
 
     void FixedUpdate()
     {
-        if (jumping)
-            rigidbody2D.gravityScale = gravity;
-        else
-            rigidbody2D.gravityScale = gravityMax;
-
-        // If the player should jump...
-        if (jump)
+        if (!isMenu)
         {
-            // Add a vertical velocity to the player jump.
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce / 100);
+            if (jumping)
+                rigidbody2D.gravityScale = gravity;
+            else
+                rigidbody2D.gravityScale = gravityMax;
 
-            /// Make sure the player can't jump again until the jump conditions from Update are satisfied.
-            jump = false;
+            // If the player should jump...
+            if (jump)
+            {
+                // Add a vertical velocity to the player jump.
+                rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce / 100);
+
+                /// Make sure the player can't jump again until the jump conditions from Update are satisfied.
+                jump = false;
+            }
         }
     }
 }
