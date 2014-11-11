@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HUD : MonoBehaviour
 {
-    public static bool pause = false;
+    public static bool IsExit = false;
 
     public GUISkin guiSkin;
 
@@ -39,7 +39,7 @@ public class HUD : MonoBehaviour
     {
         SoundEffectsHelper.Instance.MakeBackgroundSound(SoundType.Background);
 
-        pause = false;
+        IsExit = false;
     }
 
     void Update()
@@ -47,9 +47,9 @@ public class HUD : MonoBehaviour
         playerScore += Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Escape))
-            pause = !pause;
+            IsExit = !IsExit;
 
-        if (pause)
+        if (IsExit)
         {
             Time.timeScale = 0.00001f;
             SoundEffectsHelper.Instance.SetMute(true);
@@ -78,16 +78,21 @@ public class HUD : MonoBehaviour
 
 		GUI.Label(new Rect(10, guiStyle.lineHeight + 10, Screen.width, HUD.Height), LangHelper.GetInstance().GetString("ScoreLabel") + (int)(playerScore * 100));
 
-        if (pause)
+        if (IsExit)
             PauseMenuGUI();
     }
 
     void PauseMenuGUI()
     {
+        GUI.skin = guiSkin;
+
+        guiSkin.label.fontSize = HUD.LabelSize;
+        guiSkin.button.fontSize = HUD.ButtonSize;
+
         GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), LangHelper.GetInstance().GetString("OptionLabel"), GUI.skin.GetStyle("box"));
 
         if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("BackButton"), GUI.skin.GetStyle("button")))
-            pause = false;
+            IsExit = false;
 
         if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(2), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("SoundButton") + (SoundEffectsHelper.Instance.HasSound ? "On" : "Off"), GUI.skin.GetStyle("button")))
             SoundEffectsHelper.Instance.SetSound();

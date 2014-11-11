@@ -66,6 +66,9 @@ public class MainMenu : MonoBehaviour
     public void OptionsMenuGUI()
     {
         GUI.skin = this.guiSkin;
+        
+        guiSkin.label.fontSize = HUD.LabelSize;
+        guiSkin.button.fontSize = HUD.ButtonSize;
 
         GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), LangHelper.GetInstance().GetString("OptionLabel"), GUI.skin.GetStyle("box"));
 
@@ -75,38 +78,49 @@ public class MainMenu : MonoBehaviour
         if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(2), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("MusicButton") + (SoundEffectsHelper.Instance.HasMusic ? "On" : "Off"), GUI.skin.GetStyle("button")))
             SoundEffectsHelper.Instance.SetMusic();
 
+        if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(4), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("BackButton"), GUI.skin.GetStyle("button")))
+            this.currentGUIMethod = MainMenuGUI;
+
         if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(3), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("LanguageLabel")))
-            if (!showDropLanguages) showDropLanguages = true; else showDropLanguages = false;
+        {
+            if (!showDropLanguages) 
+                showDropLanguages = true; 
+            else 
+                showDropLanguages = false;
+        }
 
         if (showDropLanguages)
         {
-			scrollViewVector = GUI.BeginScrollView(new Rect(HUD.Left + HUD.Width - 20, HUD.GetPositionTop(3), HUD.Width / 4,  HUD.Height), scrollViewVector, new Rect(0, 0, HUD.Width / 5.5f, (HUD.Height * languages.Length)));
+            scrollViewVector = 
+            GUI.BeginScrollView(new Rect(HUD.Left + HUD.Width - 20, HUD.GetPositionTop(3), HUD.Width / 4, HUD.Height), scrollViewVector, new Rect(0, 0, HUD.Width / 5.5f, (HUD.Height * languages.Length)));
 
             for (index = 0; index < languages.Length; index++)
             {
-				if (GUI.Button(new Rect(0, index * HUD.Height, HUD.Width / 5, HUD.Height), ""))
+                if (GUI.Button(new Rect(0, index * HUD.Height, HUD.Width / 5, HUD.Height), ""))
                 {
                     showDropLanguages = false; wichLanguage = index;
                     PlayerPrefs.SetString("Language", languages[index]);
                     LangHelper.GetInstance().ChangeLanguage();
                 }
 
-				GUI.Label(new Rect(12, index * HUD.Height, HUD.Width, HUD.Height), Resources.Load(languages[index]) as Texture);
+                GUI.Label(new Rect(12, index * HUD.Height, HUD.Width / 5, HUD.Height), Resources.Load(languages[index]) as Texture);
             }
             GUI.EndScrollView();
         }
         else
-			GUI.Label(new Rect(HUD.Left + HUD.Width - 10, HUD.GetPositionTop(3), HUD.Width, HUD.Height), Resources.Load(languages[wichLanguage]) as Texture);
-
-        if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(4), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("BackButton"), GUI.skin.GetStyle("button")))
-            this.currentGUIMethod = MainMenuGUI;
+        {
+            GUI.Label(new Rect(HUD.Left + HUD.Width - 10, HUD.GetPositionTop(3), HUD.Width, HUD.Height), Resources.Load(languages[wichLanguage]) as Texture);
+        }
     }
 
     public void ExitMenuGUI()
     {
         GUI.skin = this.guiSkin;
-        
-		GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), LangHelper.GetInstance().GetString("ConfirmMessageExit"), GUI.skin.GetStyle("box"));
+
+        guiSkin.label.fontSize = HUD.LabelSize;
+        guiSkin.button.fontSize = HUD.ButtonSize;
+
+        GUI.Box(new Rect(10, 10, Screen.width - 20, Screen.height - 20), LangHelper.GetInstance().GetString("ConfirmMessageExit"), GUI.skin.GetStyle("box"));
 
         if (GUI.Button(new Rect(HUD.Left + 20, HUD.GetPositionTop(2), HUD.Width / 2, HUD.Height), LangHelper.GetInstance().GetString("ConfirmExitButton"), GUI.skin.GetStyle("button")))
         {
@@ -114,8 +128,8 @@ public class MainMenu : MonoBehaviour
             Application.Quit();
         }
 
-		if (GUI.Button(new Rect((HUD.Left + HUD.Left) - 20, HUD.GetPositionTop(2), HUD.Width / 2, HUD.Height), LangHelper.GetInstance().GetString("CancelExitButton"), GUI.skin.GetStyle("button")))
-            this.currentGUIMethod = MainMenuGUI;
+        if (GUI.Button(new Rect((HUD.Left + HUD.Left) - 20, HUD.GetPositionTop(2), HUD.Width / 2, HUD.Height), LangHelper.GetInstance().GetString("CancelExitButton"), GUI.skin.GetStyle("button")))
+            this.currentGUIMethod = MainMenuGUI;            
     }
 
     // Update is called once per frame

@@ -74,7 +74,7 @@ public class PlayerControl : MonoBehaviour
                 gravity = gravityMax;
             }
 
-            if (transform.position.x < position && grounded && !HUD.pause)
+            if (transform.position.x < position && grounded && !HUD.IsExit)
                 transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
         }
     }

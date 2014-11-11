@@ -9,7 +9,7 @@ public class PlatformControl : MonoBehaviour
 
     void Update()
     {
-        if (!HUD.pause)
+        if (!HUD.IsExit)
         {
             var movement = new Vector3(
               speed.x * direction.x,
