@@ -84,15 +84,15 @@ public class PlayerControl : MonoBehaviour
         if (!isMenu)
         {
             if (jumping)
-                rigidbody2D.gravityScale = gravity;
+                GetComponent<Rigidbody2D>().gravityScale = gravity;
             else
-                rigidbody2D.gravityScale = gravityMax;
+                GetComponent<Rigidbody2D>().gravityScale = gravityMax;
 
             // If the player should jump...
             if (jump)
             {
                 // Add a vertical velocity to the player jump.
-                rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce / 100);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce / 100);
 
                 /// Make sure the player can't jump again until the jump conditions from Update are satisfied.
                 jump = false;

@@ -59,14 +59,14 @@ public class MainMenu : MonoBehaviour
         var guiStyleCoin = new GUIStyle(GUI.skin.GetStyle("label"));
         guiStyleCoin.normal.textColor = Color.yellow;
 
-		GUI.Label(new Rect(20, Screen.height - guiStyleScore.lineHeight - 20, Screen.width, Screen.height), LangHelper.GetInstance().GetString("BestScoreLabel") + bestScore, guiStyleScore);
-		GUI.Label(new Rect(Screen.width - (Screen.width / 3.5f), Screen.height - guiStyleCoin.lineHeight - 20, Screen.width, 100), LangHelper.GetInstance().GetString("TotalCoinsLabel") + totalCoin, guiStyleCoin);
+        GUI.Label(new Rect(20, Screen.height - guiStyleScore.lineHeight - 20, Screen.width, Screen.height), LangHelper.GetInstance().GetString("BestScoreLabel") + bestScore, guiStyleScore);
+        GUI.Label(new Rect(Screen.width - (Screen.width / 3.5f), Screen.height - guiStyleCoin.lineHeight - 20, Screen.width, 100), LangHelper.GetInstance().GetString("TotalCoinsLabel") + totalCoin, guiStyleCoin);
     }
 
     public void OptionsMenuGUI()
     {
         GUI.skin = this.guiSkin;
-        
+
         guiSkin.label.fontSize = HUD.LabelSize;
         guiSkin.button.fontSize = HUD.ButtonSize;
 
@@ -83,15 +83,15 @@ public class MainMenu : MonoBehaviour
 
         if (GUI.Button(new Rect(HUD.Left, HUD.GetPositionTop(3), HUD.Width, HUD.Height), LangHelper.GetInstance().GetString("LanguageLabel")))
         {
-            if (!showDropLanguages) 
-                showDropLanguages = true; 
-            else 
+            if (!showDropLanguages)
+                showDropLanguages = true;
+            else
                 showDropLanguages = false;
         }
 
         if (showDropLanguages)
         {
-            scrollViewVector = 
+            scrollViewVector =
             GUI.BeginScrollView(new Rect(HUD.Left + HUD.Width - 20, HUD.GetPositionTop(3), HUD.Width / 4, HUD.Height), scrollViewVector, new Rect(0, 0, HUD.Width / 5.5f, (HUD.Height * languages.Length)));
 
             for (index = 0; index < languages.Length; index++)
@@ -125,11 +125,15 @@ public class MainMenu : MonoBehaviour
         if (GUI.Button(new Rect(HUD.Left + 20, HUD.GetPositionTop(2), HUD.Width / 2, HUD.Height), LangHelper.GetInstance().GetString("ConfirmExitButton"), GUI.skin.GetStyle("button")))
         {
             PlayerPrefs.Save();
-            Application.Quit();
+
+            if (Application.isEditor)
+                UnityEditor.EditorApplication.isPlaying = false;
+            else
+                Application.Quit();
         }
 
         if (GUI.Button(new Rect((HUD.Left + HUD.Left) - 20, HUD.GetPositionTop(2), HUD.Width / 2, HUD.Height), LangHelper.GetInstance().GetString("CancelExitButton"), GUI.skin.GetStyle("button")))
-            this.currentGUIMethod = MainMenuGUI;            
+            this.currentGUIMethod = MainMenuGUI;
     }
 
     // Update is called once per frame
