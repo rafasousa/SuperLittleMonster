@@ -3,20 +3,22 @@ Super Little Monster
 
 'M' the Little Monster needs to save his little friends and take the major number of coins and go as far as it can to get a high score.
 
-Powered By toArray Studio:
-
-![Alt text](http://galesso.me/flappyandfire/preview/ToArray.jpg "to[] Studios")
-
 The adventure is going to begin:
 
-![Alt text](http://galesso.me/slm/SLM0.jpg "Menu")
+<p align="center">
+	<img src="/Resources/Screen Shots/2 - screen_shot_2014-10-20_at_13714_am.png" alt="Menu" width="70%" />
+</p>
 
 Go as far as you can with 'M':
 
-![Alt text](http://galesso.me/slm/SLM1.jpg "Adventure")
+<p align="center">
+	<img src="/Resources/Screen Shots/3 - screen_shot_2014-10-20_at_13304_am.png" alt="Adventure" width="70%" />
+</p>
 
 Gather all the coins you can to give more and more power to 'M', to do that don´t forget... JUMP JUMP JUMP!!!
 
-![Alt text](http://galesso.me/slm/SLM2.jpg "Adventure")
+<p align="center">
+	<img src="/Resources/Screen Shots/4 - screen_shot_2014-10-20_at_13526_am.png" alt="Adventure" width="70%" />
+</p>
 
 Version 1.0
